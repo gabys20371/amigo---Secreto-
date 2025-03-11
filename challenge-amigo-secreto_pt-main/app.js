@@ -41,7 +41,8 @@ function limparCampo() {
   // sortear amigo aleatório
   let indiceAleatorio = Math.floor(Math.random() * listaDeAmigos.length);
   let amigoSorteado = listaDeAmigos[indiceAleatorio];
-
+  // Remover o amigo sorteado da lista
+  listaDeAmigos.splice(indiceAleatorio, 1);
   // Mostrar o resultado
   document.getElementById('resultado').innerHTML = `Amigo sorteado: ${amigoSorteado}`;
    dispararConfete();
